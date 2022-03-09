@@ -1,7 +1,8 @@
+import 'dart:html';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-// ignore: use_key_in_widget_ructors
 class WelcomePage extends StatefulWidget {
   @override
   State<WelcomePage> createState() => _WelcomePageState();
@@ -14,21 +15,25 @@ class _WelcomePageState extends State<WelcomePage> {
     Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                opacity: 0.5,
+                opacity: 0.4,
                 image: AssetImage("assets/banner1.png"),
                 fit: BoxFit.fitHeight)),
         child: Column(
           children: [
-            Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 150, left: 35),
-                  child: Text("Ashrafi Abir",
-                      style: TextStyle(
-                          fontSize: 75,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold)),
-                )),
+            Row(
+              children: [
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 35, top: 150),
+                      child: Text("Ashrafi Abir",
+                          style: TextStyle(
+                              fontSize: 75,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                    )),
+              ],
+            ),
             SizedBox(
               height: 10,
             ),
@@ -92,9 +97,513 @@ class _WelcomePageState extends State<WelcomePage> {
             )
           ],
         )),
-    Container(
-      height: 100,
-      child: Text("INdex2", style: TextStyle(fontSize: 200, color: Colors.red)),
+    Row(
+      children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Container(
+            width: 280,
+            height: 370,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                color: Color(0xFF1F2428),
+                child: Column(
+                  children: [
+                    Image.asset("assets/vscode2.png"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "VSCode Portfolio",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 21,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "A themeable and developer-centric portfolio based on the VSCode",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                              fontSize: 13,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.blue),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Dart", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.yellow),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("JS", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.orange),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("CSS", style: TextStyle(fontSize: 12)))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(width: 1, color: Colors.red),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Html", style: TextStyle(fontSize: 11))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.green),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(42, 29),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child: Text("Canva",
+                                  style: TextStyle(fontSize: 8.3))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.topLeft,
+          child: Container(
+            width: 280,
+            height: 370,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                color: Color(0xFF1F2428),
+                child: Column(
+                  children: [
+                    Image.asset("assets/banner2.png"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "Beri Nais",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 21,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "A themeable and developer-centric portfolio based on the VSCode",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                              fontSize: 13,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.blue),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Dart", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.yellow),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("JS", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.orange),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("CSS", style: TextStyle(fontSize: 12)))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(width: 1, color: Colors.red),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Html", style: TextStyle(fontSize: 11))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.green),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(42, 29),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child: Text("Canva",
+                                  style: TextStyle(fontSize: 8.3))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.topLeft,
+          child: Container(
+            width: 280,
+            height: 370,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                color: Color(0xFF1F2428),
+                child: Column(
+                  children: [
+                    Image.asset("assets/banner3.png"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "Nais Sir",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 21,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "A themeable and developer-centric portfolio based on the VSCode",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                              fontSize: 13,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.blue),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Dart", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.yellow),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("JS", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.orange),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("CSS", style: TextStyle(fontSize: 12)))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(width: 1, color: Colors.red),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Html", style: TextStyle(fontSize: 11))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.green),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(42, 29),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child: Text("Canva",
+                                  style: TextStyle(fontSize: 8.3))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.topLeft,
+          child: Container(
+            width: 280,
+            height: 370,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                color: Color(0xFF1F2428),
+                child: Column(
+                  children: [
+                    Image.asset("assets/banner4.png"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "Project 3",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 21,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "A themeable and developer-centric portfolio based on the VSCode",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                              fontSize: 13,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.blue),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Dart", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.yellow),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("JS", style: TextStyle(fontSize: 12))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(
+                                      width: 1, color: Colors.orange),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("CSS", style: TextStyle(fontSize: 12)))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side: BorderSide(width: 1, color: Colors.red),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(40, 27),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child:
+                                  Text("Html", style: TextStyle(fontSize: 11))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  side:
+                                      BorderSide(width: 1, color: Colors.green),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40)),
+                                  fixedSize: Size(42, 29),
+                                  primary: Color(0xFF24292E)),
+                              onPressed: () {},
+                              child: Text("Canva",
+                                  style: TextStyle(fontSize: 8.3))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     ),
     Container(),
     Container()
@@ -355,12 +864,12 @@ class _WelcomePageState extends State<WelcomePage> {
                                       width: 10,
                                     ),
                                     Image.asset(
-                                      "assets/js.png",
+                                      "assets/json.png",
                                       height: 18,
                                       width: 18,
                                     ),
-                                    Text("  cover_letter.js",
-                                        style: TextStyle(color: Colors.white)),
+                                    Text("  contact.json",
+                                        style: TextStyle(color: Colors.white))
                                   ],
                                 )),
                             SizedBox(
@@ -374,12 +883,12 @@ class _WelcomePageState extends State<WelcomePage> {
                                       width: 10,
                                     ),
                                     Image.asset(
-                                      "assets/json.png",
+                                      "assets/js.png",
                                       height: 18,
                                       width: 18,
                                     ),
-                                    Text("  data.json",
-                                        style: TextStyle(color: Colors.white))
+                                    Text("  cover_letter.js",
+                                        style: TextStyle(color: Colors.white)),
                                   ],
                                 )),
                             SizedBox(
@@ -474,11 +983,11 @@ class _WelcomePageState extends State<WelcomePage> {
                           width: 20,
                         ),
                         Image.asset(
-                          "assets/js.png",
+                          "assets/json.png",
                           height: 18,
                           width: 18,
                         ),
-                        Text("  cover_letter.js   ",
+                        Text("  contact.json   ",
                             style: TextStyle(color: Colors.white))
                       ],
                     )),
@@ -493,11 +1002,11 @@ class _WelcomePageState extends State<WelcomePage> {
                           width: 20,
                         ),
                         Image.asset(
-                          "assets/json.png",
+                          "assets/js.png",
                           height: 18,
                           width: 18,
                         ),
-                        Text("  data.json   ",
+                        Text("  cover_letter.js   ",
                             style: TextStyle(color: Colors.white))
                       ],
                     )),
