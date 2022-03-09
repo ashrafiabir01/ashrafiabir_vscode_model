@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 // ignore: use_key_in_widget_ructors
@@ -7,7 +8,97 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  bool buttondire = false;
+  bool buttondire = true;
+  int PagesIndex = 0;
+  final pages = [
+    Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                opacity: 0.5,
+                image: AssetImage("assets/banner1.png"),
+                fit: BoxFit.fitHeight)),
+        child: Column(
+          children: [
+            Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 150, left: 35),
+                  child: Text("Ashrafi Abir",
+                      style: TextStyle(
+                          fontSize: 75,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold)),
+                )),
+            SizedBox(
+              height: 10,
+            ),
+            Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 35),
+                  child: Container(
+                    child: DefaultTextStyle(
+                      style: TextStyle(fontSize: 25.0, color: Colors.white),
+                      child: AnimatedTextKit(
+                        repeatForever: true,
+                        animatedTexts: [
+                          TypewriterAnimatedText(
+                              'Founder & CEO at Dark Hunter 141'),
+                          TypewriterAnimatedText(
+                              "I'm a Student & part time Programmer"),
+                          TypewriterAnimatedText(
+                              "I'm Flutter Developer & Python Developer"),
+                          TypewriterAnimatedText(
+                              "Nobody Loves me , so I love Programming")
+                        ],
+                        onTap: () {
+                          print("Tap Event");
+                        },
+                      ),
+                    ),
+                  ),
+                )),
+            SizedBox(
+              height: 40,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: EdgeInsets.only(left: 35),
+                child: Row(children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          side: BorderSide(width: 0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.zero),
+                          fixedSize: Size(130, 47),
+                          primary: Color(0xFFF9826C)),
+                      onPressed: () {},
+                      child: Text("About Me", style: TextStyle(fontSize: 22))),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          side: BorderSide(width: 1, color: Color(0xFFF9826C)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.zero),
+                          fixedSize: Size(130, 47),
+                          primary: Color(0xFF24292E)),
+                      onPressed: () {},
+                      child: Text("Hire Me", style: TextStyle(fontSize: 22)))
+                ]),
+              ),
+            )
+          ],
+        )),
+    Container(
+      height: 100,
+      child: Text("INdex2", style: TextStyle(fontSize: 200, color: Colors.red)),
+    ),
+    Container(),
+    Container()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -167,7 +258,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ]),
           ),
           Container(
-            width: 200,
+            width: 180,
             color: Color(0xFF1F2428),
             child: Column(
               children: [
@@ -230,7 +321,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                       height: 18,
                                       width: 18,
                                     ),
-                                    Text("  about.html",
+                                    Text("  index.html",
                                         style: TextStyle(color: Colors.white))
                                   ],
                                 )),
@@ -316,7 +407,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 250,
+            width: MediaQuery.of(context).size.width - 235,
             child: Column(children: [
               SizedBox(height: 2),
               Container(
@@ -324,40 +415,54 @@ class _WelcomePageState extends State<WelcomePage> {
                 height: 50,
                 child: Row(
                   children: [
-                    Container(
-                        child: Row(
-                      children: [
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Image.asset(
-                          "assets/html.png",
-                          height: 18,
-                          width: 18,
-                        ),
-                        Text("  about.html  ",
-                            style: TextStyle(color: Colors.white))
-                      ],
-                    )),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          PagesIndex = 0;
+                        });
+                      },
+                      child: Container(
+                          child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            "assets/html.png",
+                            height: 18,
+                            width: 18,
+                          ),
+                          Text("  index.html  ",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      )),
+                    ),
                     SizedBox(
                       width: 1,
                       child: Container(color: Colors.black),
                     ),
-                    Container(
-                        child: Row(
-                      children: [
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Image.asset(
-                          "assets/dart.png",
-                          height: 18,
-                          width: 18,
-                        ),
-                        Text("  project.dart   ",
-                            style: TextStyle(color: Colors.white))
-                      ],
-                    )),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          PagesIndex = 1;
+                        });
+                      },
+                      child: Container(
+                          child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            "assets/dart.png",
+                            height: 18,
+                            width: 18,
+                          ),
+                          Text("  project.dart   ",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      )),
+                    ),
                     SizedBox(
                       width: 1,
                       child: Container(color: Colors.black),
@@ -417,9 +522,16 @@ class _WelcomePageState extends State<WelcomePage> {
                     )),
                   ],
                 ),
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  height: 530,
+                  child: pages[PagesIndex],
+                ),
               )
             ]),
-          )
+          ),
         ],
       )),
     );
