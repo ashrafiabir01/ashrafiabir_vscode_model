@@ -1,8 +1,7 @@
-import 'dart:convert';
 import 'package:ashrafiabir_vscode_model/pages/about_html.dart';
 import 'package:ashrafiabir_vscode_model/pages/contact_json.dart';
+import 'package:ashrafiabir_vscode_model/pages/github_md.dart';
 import 'package:ashrafiabir_vscode_model/pages/projects.dart';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -13,23 +12,14 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
   bool buttondire = true;
   int PagesIndex = 0;
-  String avatar_url = "", followers = "", totalrepo = "", userename = "";
 
   final pages = [
     AboutHtml(), //page1
     Projects(), //page2
     ContactJson(), //page3
     Container(), //page4
-    Container(
-      child: Text("Nais"),
-    )
+    GithubMD()
   ];
-
-  @override
-  void initState() {
-    super.initState();
-    getuserinfo();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -319,22 +309,30 @@ class _WelcomePageState extends State<WelcomePage> {
                             SizedBox(
                               height: 10,
                             ),
-                            Align(
-                                alignment: Alignment.topLeft,
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Image.asset(
-                                      "assets/js.png",
-                                      height: 18,
-                                      width: 18,
-                                    ),
-                                    Text("  cover_letter.js",
-                                        style: TextStyle(color: Colors.white)),
-                                  ],
-                                )),
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  PagesIndex = 3;
+                                });
+                              },
+                              child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Image.asset(
+                                        "assets/js.png",
+                                        height: 18,
+                                        width: 18,
+                                      ),
+                                      Text("  cover_letter.js",
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                    ],
+                                  )),
+                            ),
                             SizedBox(
                               height: 10,
                             ),
@@ -458,19 +456,26 @@ class _WelcomePageState extends State<WelcomePage> {
                       child: Container(color: Colors.black),
                     ),
                     Container(
-                        child: Row(
-                      children: [
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Image.asset(
-                          "assets/js.png",
-                          height: 18,
-                          width: 18,
-                        ),
-                        Text("  cover_letter.js   ",
-                            style: TextStyle(color: Colors.white))
-                      ],
+                        child: InkWell(
+                      onTap: () {
+                        setState(() {
+                          PagesIndex = 3;
+                        });
+                      },
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            "assets/js.png",
+                            height: 18,
+                            width: 18,
+                          ),
+                          Text("  cover_letter.js   ",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
                     )),
                     SizedBox(
                       width: 1,
@@ -513,22 +518,5 @@ class _WelcomePageState extends State<WelcomePage> {
         ],
       )),
     );
-  }
-
-  getuserinfo() async {
-    var response =
-        await http.get(Uri.parse("https://api.github.com/users/ashrafiabir01"));
-
-    var jsondata = jsonDecode(response.body);
-    var av_url = jsondata["avatar_url"];
-    var t_flo = jsondata["followers"];
-    var t_repo = jsondata["public_repos"];
-    var usernamea = jsondata["login"];
-    setState(() {
-      avatar_url = av_url;
-      followers = t_flo.toString();
-      totalrepo = t_repo.toString();
-      userename = usernamea;
-    });
   }
 }
