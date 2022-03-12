@@ -1,6 +1,7 @@
 import 'package:ashrafiabir_vscode_model/pages/about_html.dart';
 import 'package:ashrafiabir_vscode_model/pages/contact_json.dart';
 import 'package:ashrafiabir_vscode_model/pages/github_md.dart';
+import 'package:ashrafiabir_vscode_model/pages/posts.dart';
 import 'package:ashrafiabir_vscode_model/pages/projects.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class _WelcomePageState extends State<WelcomePage> {
     AboutHtml(), //page1
     Projects(), //page2
     ContactJson(), //page3
-    Container(), //page4
+    GitPosts(), //page4
     GithubMD()
   ];
 
@@ -312,33 +313,6 @@ class _WelcomePageState extends State<WelcomePage> {
                             InkWell(
                               onTap: () {
                                 setState(() {
-                                  PagesIndex = 3;
-                                });
-                              },
-                              child: Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Image.asset(
-                                        "assets/js.png",
-                                        height: 18,
-                                        width: 18,
-                                      ),
-                                      Text("  cover_letter.js",
-                                          style:
-                                              TextStyle(color: Colors.white)),
-                                    ],
-                                  )),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                setState(() {
                                   PagesIndex = 4;
                                 });
                               },
@@ -358,7 +332,34 @@ class _WelcomePageState extends State<WelcomePage> {
                                           style: TextStyle(color: Colors.white))
                                     ],
                                   )),
-                            )
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  PagesIndex = 3;
+                                });
+                              },
+                              child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Image.asset(
+                                        "assets/js.png",
+                                        height: 18,
+                                        width: 18,
+                                      ),
+                                      Text("  post.js",
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                    ],
+                                  )),
+                            ),
                           ],
                         )))
               ],
@@ -370,7 +371,7 @@ class _WelcomePageState extends State<WelcomePage> {
               SizedBox(height: 2),
               Container(
                 color: Color(0xFF1F2428),
-                height: 50,
+                height: 38,
                 child: Row(
                   children: [
                     SizedBox(
@@ -459,32 +460,6 @@ class _WelcomePageState extends State<WelcomePage> {
                         child: InkWell(
                       onTap: () {
                         setState(() {
-                          PagesIndex = 3;
-                        });
-                      },
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Image.asset(
-                            "assets/js.png",
-                            height: 18,
-                            width: 18,
-                          ),
-                          Text("  cover_letter.js   ",
-                              style: TextStyle(color: Colors.white))
-                        ],
-                      ),
-                    )),
-                    SizedBox(
-                      width: 1,
-                      child: Container(color: Colors.black),
-                    ),
-                    Container(
-                        child: InkWell(
-                      onTap: () {
-                        setState(() {
                           PagesIndex = 4;
                         });
                       },
@@ -499,6 +474,32 @@ class _WelcomePageState extends State<WelcomePage> {
                             width: 18,
                           ),
                           Text("  github.md   ",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                    )),
+                    SizedBox(
+                      width: 1,
+                      child: Container(color: Colors.black),
+                    ),
+                    Container(
+                        child: InkWell(
+                      onTap: () {
+                        setState(() {
+                          PagesIndex = 3;
+                        });
+                      },
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            "assets/js.png",
+                            height: 18,
+                            width: 18,
+                          ),
+                          Text("  post.js   ",
                               style: TextStyle(color: Colors.white))
                         ],
                       ),

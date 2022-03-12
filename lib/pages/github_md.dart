@@ -36,8 +36,8 @@ class _GithubMDState extends State<GithubMD> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(right: 15),
-                        child: Image.network(
-                          avatar_url,
+                        child: Image.asset(
+                          "assets/ashrafiabir.png",
                           height: 50,
                           width: 50,
                         ),

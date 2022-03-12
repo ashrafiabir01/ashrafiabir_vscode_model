@@ -46,9 +46,14 @@ class ContactJson extends StatelessWidget {
                   Text("9",
                       style: TextStyle(color: Color(0xFF808080), fontSize: 20)),
                   SizedBox(height: 4),
+                  Text("10",
+                      style: TextStyle(color: Color(0xFF808080), fontSize: 20)),
+                  SizedBox(height: 4),
+                  Text("11",
+                      style: TextStyle(color: Color(0xFF808080), fontSize: 20)),
                   Row(
                     children: [
-                      Text("   10",
+                      Text("   12",
                           style: TextStyle(
                               color: Color(0xFF808080), fontSize: 20)),
                       Text("  }",
@@ -67,7 +72,7 @@ class ContactJson extends StatelessWidget {
                     //   children: [
                     //     Text('''"facebook"''',
                     //         style: TextStyle(
-                    //             color: Color(0xFFD7F484), fontSize: 20)),
+                    //             color: Color(0xFFFFFFFFF), fontSize: 20)),
                     //     Text(''' : ''',
                     //         style:
                     //             TextStyle(color: Colors.white, fontSize: 20)),
@@ -85,7 +90,7 @@ class ContactJson extends StatelessWidget {
                           TextSpan(
                               text: '''"name"''',
                               style: TextStyle(
-                                  color: Color(0xFFD7F484), fontSize: 20)),
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
                           TextSpan(
                               text: ' : ',
                               style:
@@ -105,7 +110,7 @@ class ContactJson extends StatelessWidget {
                           TextSpan(
                               text: '''"email"''',
                               style: TextStyle(
-                                  color: Color(0xFFD7F484), fontSize: 20)),
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
                           TextSpan(
                               text: ' : ',
                               style:
@@ -125,7 +130,7 @@ class ContactJson extends StatelessWidget {
                           TextSpan(
                               text: '''"github"''',
                               style: TextStyle(
-                                  color: Color(0xFFD7F484), fontSize: 20)),
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
                           TextSpan(
                               text: ' : ',
                               style:
@@ -138,14 +143,14 @@ class ContactJson extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 2.5),
+                    SizedBox(height: 3.2),
                     RichText(
                       text: TextSpan(
                         children: <TextSpan>[
                           TextSpan(
                               text: '''"twitter"''',
                               style: TextStyle(
-                                  color: Color(0xFFD7F484), fontSize: 20)),
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
                           TextSpan(
                               text: ' : ',
                               style:
@@ -158,14 +163,14 @@ class ContactJson extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 2.5),
+                    SizedBox(height: 2.9),
                     RichText(
                       text: TextSpan(
                         children: <TextSpan>[
                           TextSpan(
                               text: '''"facebook"''',
                               style: TextStyle(
-                                  color: Color(0xFFD7F484), fontSize: 20)),
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
                           TextSpan(
                               text: ' : ',
                               style:
@@ -178,20 +183,60 @@ class ContactJson extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 2.5),
+                    SizedBox(height: 3.2),
                     RichText(
                       text: TextSpan(
                         children: <TextSpan>[
                           TextSpan(
                               text: '''"website"''',
                               style: TextStyle(
-                                  color: Color(0xFFD7F484), fontSize: 20)),
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
                           TextSpan(
                               text: ' : ',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20)),
                           TextSpan(
                             text: '"ashrafiabir.me"                ',
+                            style: TextStyle(
+                                color: Color(0xFFF9826C), fontSize: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 2.5),
+                    RichText(
+                      text: TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '''"dev.to"''',
+                              style: TextStyle(
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
+                          TextSpan(
+                              text: ' : ',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20)),
+                          TextSpan(
+                            text: '"ashrafiabir"                         ',
+                            style: TextStyle(
+                                color: Color(0xFFF9826C), fontSize: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 2.5),
+                    RichText(
+                      text: TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '''"instagram"''',
+                              style: TextStyle(
+                                  color: Color(0xFFFFFFFFF), fontSize: 20)),
+                          TextSpan(
+                              text: ' : ',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20)),
+                          TextSpan(
+                            text: '"ashrafiabir"                 ',
                             style: TextStyle(
                                 color: Color(0xFFF9826C), fontSize: 20),
                           ),
